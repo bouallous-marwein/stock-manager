@@ -26,6 +26,17 @@ install_dependencies:
       - client/node_modules/
       - server/node_modules/
 
+language:
+  - nodejs
+group:
+  - stable
+dist:
+  - trusty
+os:
+  -linux
+stage:
+  - Test
+
 test_with_lab:
   stage: test
   script: npm test
