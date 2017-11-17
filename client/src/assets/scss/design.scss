@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400');
+
+/* On importe bootstrap */
+
+@import "./bootstrap/bootstrap-custom";
+@import "./fontawesome/font-awesome.scss";
+//@import "./toastr/toastr.scss";
+
+/* On fait ce qu'on veut après */
+
+//colors
+$color_iron_approx: #d7d7d7;
+$color_royal_blue_approx: #4285f4;
+$white: #ffffff;
+$color_alto_approx: #dddddd;
+$color_mountain_mist_approx: #999999;
+$color_storm_dust_approx: #666666;
+$color_pink_swan_approx: #bbbbbb;
+$color_quill_gray_approx: #d2d2d2;
+$color_celeste_approx: #cfcfcf;
+$color_apple_approx: #65b045;
+$color_perano_approx: #a0c3ff;
+$color_valencia_approx: #dd4b39;
+$color_selective_yellow_approx: #f4b400;
+$color_tundora_approx: #444444;
+//@extend-elements
+//original selectors
+//.well, .panel
+%extend_1 {
+    border-color: $color_quill_gray_approx;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 1px 0 $color_celeste_approx;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 3px;
+}
+
+.btn {
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 1px;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 0;
+    &.btn-primary {
+        border-color: transparent;
+        background-color: $color_royal_blue_approx;
+    }
+    &.btn-plus {
+        background-color: $white;
+        border-width: 1px;
+        border-color: $color_alto_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 1px 1px 0 $color_mountain_mist_approx;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 3px;
+        color: $color_storm_dust_approx;
+        //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        text-shadow: 0 0 1px $color_pink_swan_approx;
+    }
+    &.btn-success {
+        background-color: $color_apple_approx;
+    }
+    &.btn-info {
+        background-color: $color_perano_approx;
+        border-color: $color_perano_approx;
+    }
+    &.btn-danger {
+        background-color: $color_valencia_approx;
+    }
+    &.btn-warning {
+        background-color: $color_selective_yellow_approx;
+        color: $color_tundora_approx;
+    }
+}
+
+.form-control {
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 1px;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 0;
+    border-color: $color_iron_approx;
+}
+
+.panel {
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 1px;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 0;
+    @extend %extend_1;
+    .btn {
+        i,
+        span {
+            color: #666666;
+        }
+    }
+    .panel-heading {
+        background-color: #ffffff;
+        font-weight: 700;
+        font-size: 16px;
+        color: #262626;
+        border-color: #ffffff;
+        a {
+            font-weight: 400;
+            font-size: 11px;
+        }
+    }
+    .panel-default {
+        border-color: #cccccc;
+    }
+    .panel-thumbnail {
+        padding: 0;
+        img {
+            width: 350px;
+            height: 350px;
+        }
+    }
+    .img-circle {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.list-group {
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 1px;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 0;
+}
+
+.well {
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 1px;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 0;
+    @extend %extend_1;
+}
+
+.label {
+    &.label-primary {
+        background-color: $color_royal_blue_approx;
+    }
+    &.label-success {
+        background-color: $color_apple_approx;
+    }
+    &.label-info {
+        background-color: $color_perano_approx;
+        border-color: $color_perano_approx;
+    }
+    &.label-danger {
+        background-color: $color_valencia_approx;
+    }
+    &.label-warning {
+        background-color: $color_selective_yellow_approx;
+        color: $color_tundora_approx;
+    }
+}
+
+.progress-bar-success {
+    background-color: $color_apple_approx;
+}
+
+.progress-bar-info {
+    background-color: $color_perano_approx;
+    border-color: $color_perano_approx;
+}
+
+.progress-bar-danger {
+    background-color: $color_valencia_approx;
+}
+
+.progress-bar-warning {
+    background-color: $color_selective_yellow_approx;
+    color: $color_tundora_approx;
+}
+
+.list-group-item {
+    &.active {
+        background-color: $color_royal_blue_approx;
+        &:hover {
+            background-color: $color_royal_blue_approx;
+        }
+        &:focus {
+            background-color: $color_royal_blue_approx;
+        }
+    }
+    &:first-child,
+    &:last-child {
+        border-radius: 0;
+    }
+}
+
+.navbar-default {
+    background-color: #f4f4f4;
+    border-width: 0;
+    z-index: 5;
+    .navbar-nav {
+        >li {
+            a {
+                border: 0 solid transparent;
+                border-bottom-width: 2px;
+                &.active,
+                &:hover {
+                    //border: 0 solid #4285f2;
+                    border-bottom-width: 2px;
+                    background-color: transparent;
+                    color: #000000;
+                }
+                &.router-link-exact-active,
+                &.router-link-active {
+                    //border: 0 solid #4285b0;
+                }
+            }
+        }
+    }
+    .dropdown-menu {
+        background-color: #ffffff;
+        li {
+            >a {
+                padding-left: 30px;
+            }
+        }
+    }
+}
+
+.header {
+    background-color: #ffffff;
+    border-width: 0;
+    .navbar-collapse {
+        background-color: #ffffff;
+    }
+}
+
+hr {
+    border-color: #ececec;
+}
+
+button {
+    outline: 0;
+}
+
+textarea {
+    resize: none;
+    outline: 0;
+}
+
+h3,
+h4,
+h5 {
+    border: 0 solid #efefef;
+    border-bottom-width: 1px;
+    padding-bottom: 10px;
+}
+
+.modal-dialog {
+    width: 450px;
+}
+
+.modal-footer {
+    border-width: 0;
+}
+
+.dropdown-menu {
+    background-color: #f4f4f4;
+    border-color: #f0f0f0;
+    border-radius: 0;
+    margin-top: -1px;
+}
+
+
+/* end theme */
+
+
+/* template layout*/
+
+#subnav {
+    position: fixed;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    #subnav {
+        padding-top: 6px;
+    }
+}
+
+#main {
+    padding-top: 120px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
