@@ -1,0 +1,31 @@
+image: node:latest
+
+stages:
+  - build
+  - test
+
+cache:
+  paths:
+    - node_modules/
+    - client/node_modules/
+    - server/node_modules/
+    - public/
+
+install_dependencies:
+  stage: build
+  script:
+    - npm install
+    - cd server
+    - npm install
+    - cd ..
+    - npm install
+    - npm build
+  artifacts:
+    paths:
+      - node_modules/
+      - client/node_modules/
+      - server/node_modules/
+
+test_with_lab:
+  stage: test
+  script: npm test
